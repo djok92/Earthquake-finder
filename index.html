@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Earthquake | Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div id="root">
+            <earthquake-error v-bind:err="err" @showerror="showError" @hideerror="hideError"></earthquake-error>
+            <earthquake-form  @showresult="showResult" @hideresult="resetResult" @showerror="showError" @hideerror="hideError"></earthquake-form>
+            <earthquake-result v-bind:msg="msg" @hideresult="resetResult"></earthquake-result>
+        </div>
+    </section>
+   
+    <!--Vue.js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <!--Vue.js Router-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.2/vue-router.min.js"></script>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Custom javascript-->  
+    <script src="js/app.js"></script>
+</body>
+</html>
